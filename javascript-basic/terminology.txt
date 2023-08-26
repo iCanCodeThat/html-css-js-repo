@@ -23,3 +23,14 @@ Humans => 0, 1, 2 ...,9
 
     - Round a Number
         - Math.round ();
+
+2 Strings
+
+- string = text
+- Escape Character
+    - we can use \' or \" that is just text.
+    - \n = newline char
+- (`)
+= interpolation (${}) = insert value directly into a string
+    - ex. `items (${1+1})`
+    - recommended solution
