@@ -1,0 +1,25 @@
+Basic of Javascript
+    - giving instructions to a computer (Code)
+    - the code follows our instructions (running the code)
+
+Syntax
+    - rule that we have to follow using a programming language.
+    - similar to English (grammar).
+    - follow the js rule strictly.
+
+1 Number
+
+    - Order of Operation
+    - 1 = ()
+    - 2 = * /
+    - 3 = + -
+
+Computer => 0, 1
+Humans => 0, 1, 2 ...,9
+    - Computer can store 0.01 which is 0.25.
+    - When working with money.
+        - Do the calculations in cents.
+        - ex. (2095 + 799) / 100 = 28.94
+
+    - Round a Number
+        - Math.round ();
