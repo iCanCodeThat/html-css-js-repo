@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5 - Cart Quantity</title>
+    <!--------------------------CSS----------------------------------->
+    <style>
+      
+     
+    </style>
+  </head>
+  <body>
+
+    <!--
+    <button onclick="
+      console.log(`Cart Quantity: ${cartQuantity}`) 
+    ">Show Quantity</button>
+
+    <button onclick="
+      cartQuantity = cartQuantity + 1;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Add to Cart</button>
+    
+    <button onclick="
+      cartQuantity = cartQuantity + 2;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+2</button>
+    
+    <button onclick="
+      cartQuantity = cartQuantity + 3;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+3</button>
+    
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was Reset!');
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Reset Cart</button>
+    -->
+    <button onclick="
+      console.log(`Cart Quantity: ${cartQuantity}`) 
+    ">Show Quantity</button>
+
+    <button onclick="
+      cartQuantity++;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Add to Cart</button>
+    
+    <button onclick="
+      cartQuantity += 2;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+2</button>
+    
+    <button onclick="
+      cartQuantity += 3;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+3</button>
+    
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was Reset!');
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Reset Cart</button>
+
+    <!---------------------------Javascript----------------------------->
+    <script>
+      /*
+      NOTE!!!
+      you can either use:
+      cartQuantity = cartQuantity + 1;
+
+      or
+      
+      cartQuantity += 1;
+
+      or
+
+      cartQuantity++;
+      
+
+      -----------------------------------------
+
+      Variable Re-assignment Shortcuts
+
+      += 2 variable = variable + 2; adding variables to 2
+      -= 2 variable = variable - 2; subtracting var to 2
+      *= 2 variable = variable * 2; multiplying var to 2
+      /= 2 variable = variable / 2; dividing vvar to 2
+      ++   variable = variable + 1; adding var to 1
+      --   variable = variable - 1; subtracting var to 1
+      
+      -----------------------------------------
+      
+      Naming Concentions
+
+      camelCase   = cartQuantity (use for JS)
+      PascalCase  = CartQuantity (can also use for JS)
+      kebab-case  = cart-quantity (can only use for HTML)
+      snake_case  = cart_quantity (can use to other languages)
+      */
+      let cartQuantity = 0;
+    </script>
+  </body>
+</html>
