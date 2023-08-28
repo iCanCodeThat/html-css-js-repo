@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 5</title>
+</head>
+<body>
+  <!------------------Exercise 5H, 5I, 5J, and 5K----------------------->
+  <button onclick="
+      console.log(`Cart Quantity: ${cartQuantity}`) 
+    ">Show Quantity</button>
+
+    <button onclick="
+      cartQuantity++;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Add to Cart</button>
+
+    <button onclick="
+      cartQuantity -= 2;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">-2</button>
+
+    <button onclick="
+      cartQuantity -= 3;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">-3</button>
+    
+    <button onclick="
+      cartQuantity += 2;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+2</button>
+    
+    <button onclick="
+      cartQuantity += 3;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+3</button>
+
+    <button onclick="
+      cartQuantity += 4;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+4</button>
+
+    <button onclick="
+      cartQuantity += 5;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">+5</button>
+
+    <button onclick="
+      cartQuantity--;
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Remove from Cart</button>
+    
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was Reset!');
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    ">Reset Cart</button>
+    <br><br>
+
+    <!------------------Exercise 5L, 5M and 5N--------------------->
+    <p>
+      <button onclick="
+        calculation += '1';
+        console.log(calculation);
+      ">1</button>
+
+      <button onclick="
+        calculation += '2';
+        console.log(calculation);
+      ">2</button>
+
+      <button onclick="
+        calculation += '3';
+        console.log(calculation);
+      ">3</button>
+      <button onclick="
+        calculation += ' + ';
+        console.log(calculation);
+      ">+</button>
+    </p>
+    <p>
+      <button onclick="
+        calculation += '4';
+        console.log(calculation);
+      ">4</button>
+
+      <button onclick="
+        calculation += '5';
+        console.log(calculation);
+      ">5</button>
+
+      <button onclick="
+        calculation += '6';
+        console.log(calculation);
+      ">6</button>
+      <button onclick="
+        calculation += ' - ';
+        console.log(calculation);
+      ">-</button>
+    </p>
+    <p>
+      <button onclick="
+        calculation += '7';
+        console.log(calculation);
+      ">7</button>
+
+      <button onclick="
+        calculation += '8';
+        console.log(calculation);
+      ">8</button>
+
+      <button onclick="
+        calculation += '9';
+        console.log(calculation);
+      ">9</button>
+
+      <button onclick="
+        calculation += ' * ';
+        console.log(calculation);
+      ">*</button>
+    </p>
+    <p>
+      <button onclick="
+        calculation += '0';
+        console.log(calculation);
+      ">0</button>
+
+      <button onclick="
+        calculation += ' . ';
+        console.log(calculation);
+      ">.</button>
+
+      <button onclick="
+        calculation = eval(calculation);
+        console.log(calculation);
+      ">=</button>
+      <button onclick="
+        calculation += ' / ';
+        console.log(calculation);
+      ">/</button>
+    </p>
+    <button onclick="
+      calculation = '';
+      console.log('Cleared!');
+    ">Clear</button>
+    
+
+   
+
+    
+  <script>
+    /***************Exercise 5A and 5B**************/
+
+    let name = 'Kester';
+    console.log(`My name is: ${name}`);
+    
+    /*******Exercise 5C, 5D, 5E, 5F, and 5G********/
+
+    let cost = 5 + 2*3 + 9;// This will calculate the cost
+    let tax = (5 + 2*3 + 9) * 0.1; //This will calculate tax of 10% to the cost
+    let totalCost = cost + tax; // This will calculate the total of the cost and taxt
+    console.log(`Cost of food: $${cost}`); //result to cost
+    console.log(`Tax (10%): $${tax}`); //result to tax
+    console.log(`Total cost: $${totalCost}`); //result of the total from cost and tax.
+
+    /*******************Exercise 5H, 5I, 5J, and 5K*********************/
+    let cartQuantity = 0;
+
+    /*******************Exercise 5L, 5M, and 5N*********************/
+    let calculation = '';
+
+    
+  </script>
+
+  
+</body>
+</html>
