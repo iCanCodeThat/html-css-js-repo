@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6 - Booleans</title>
+    <!--------------------------CSS----------------------------------->
+    <style>
+      
+     
+    </style>
+  </head>
+  <body>
+    <!---------------------------Javascript----------------------------->
+    <script>
+      /*
+      
+      true
+      false
+
+      console.log(5 === 5.00);
+
+      const age = 15;
+
+      if(age >= 16){
+        console.log('You can Drive');
+      } else if(age >= 14){
+        console.log('Almost There');
+      }else {
+        console.log(`You can't Drive`);
+      }
+      
+      */
+      
+
+      /*
+        console.log(true && false);
+        console.log(0.2 >= 0 && 0.2 < 1/3); //AND operator
+        console.log(true || false); //OR operator
+        console.log(!true); //NOT operator
+
+      */
+
+      /*
+        Falsy Value
+          - false
+          - 0
+          - ''(empty string)
+          - NaN
+          - undefined
+          - null
+      
+          using truthy and falsy as a shortcut
+      */
+
+      if(0){
+        console.log('truthy');
+      }
+      //Truthy Value
+      const cartQuantity = 5;
+      if(cartQuantity){
+        console.log('Cart has products');
+      }
+
+
+      console.log(!0);
+      
+      //NaN - will only occur if there is an invalid math
+      console.log('text' / 5);
+
+      //undefined value
+      let var1;
+      console.log(var1);
+
+      /*
+        Shortcuts for if Statements
+
+        - Ternary Operator?:
+        - Guard Operator &&
+        - Default Operator ||
+      */
+
+      //Ternary operator
+      //similar to an if-else statement
+      //we can save a ternary operator in a variable
+      /*
+        Shortcut for this:
+
+        if(true){
+          'truthy'
+        }else {
+          'falsy'
+        }
+
+        This is the Shortcut:
+
+        true ? 'truthy' : 'falsy'
+      */
+      const result = 0 ? 'truthy' : 'falsy'
+      console.log(result);
+
+
+      //Guard Operator
+      /*
+        Shortcut for this:
+
+          -   if (condition) {
+                console.log('hello');
+              }
+          
+        This is the Shortcut
+
+          true && console.log('hello');
+
+          false && console.log('hello');
+      */
+      
+      /*
+        Shortcut for this:
+          - let message;
+            
+          if (condition) {
+            message = 'hello';
+          }
+         const message = 5 && 'hello';
+         console.log(message);
+      
+      */
+
+      //Default Operator
+      /*
+        OUTPUT EURO:
+        const currency = 'EUR' || 'USD';
+        console.log(currency);
+
+        Shortcut:
+
+        let currency;
+
+        if (!condition) {
+          currency = 'USD';
+        }
+      */
+      
+
+      const currency = undefined || 'USD';
+      console.log(currency);
+     
+    </script>
+  </body>
+</html> 
