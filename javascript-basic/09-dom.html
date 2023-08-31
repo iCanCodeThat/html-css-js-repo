@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9 - Document Object Model (DOM)</title>
+</head>
+<body>
+   
+  <!--                           DOM
+    - another built in object
+    - access the property using Dot Notation
+    - the document object represents / models the webpage.
+    - document also has methods.
+    - DOM combines JS and HTML together, it gives full control of the webpage.
+    - Whenever we get a value from the DOM, the value will be a string.
+
+    Method
+      -  a function saved inside an object.
+
+    document.querySelecor()
+      - lets us get any element from the page and put it inside Javascript.
+
+
+    Event Listener
+
+      onclick       =click
+      onkeydown     =key press
+      onscroll      =scrolling
+      onmouseenter  =hovering over
+      onmouseleve   =stop hovering over
+
+      - every event listener gets an event object.
+
+    ... and many more
+
+    Note:
+      - when an HTML is inside js, it is just like an object.
+      - Every HTML element has a property .innerHTML.
+      - HTML elements are js objects.
+      - objects are values and can be save in variables.
+      
+  -->
+    <button>Hello</button>
+    <button class="js-button">Second button</button>
+      
+   
+
+  <script>
+    //Syntax Rule for DOM
+      /*
+        console.log(document.title);
+      document.title = 'Changed';
+
+      console.log(document.body);
+
+      console.log(typeof document.body);
+
+      //console.log(document.body.innerHTML);
+      document.body.innerHTML = '<button>Good Job</button>';
+      
+      */
+    
+
+
+    // document.body.innerHTML = 1 + 1;
+    // document.title = 'Good Job';
+
+
+    /////////////////////////Method/////////////////////////////
+    console.log(document.querySelector('button').innerHTML);
+
+    document.querySelector('button')
+      .innerHTML = 'Changed';
+
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+
+    
+
+
+    
+  </script>
+  
+</body>
+</html>
