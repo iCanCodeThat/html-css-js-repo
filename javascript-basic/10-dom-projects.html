@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 10 - HTML, CSS, and DOM Projects</title>
+
+  <!----------------------CSS------------------------>
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    .css-subscribe-button {
+      border: none;
+      background-color: black;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-bottom: 50px;
+    }
+
+    .is-subscribed {
+      background-color: rgb(220, 220, 220);
+      color: black;
+    }
+
+
+    .css-cost-input {
+      font-size: 15px;
+      /*
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+      */
+      padding: 10px;
+      
+    }
+    
+    .calculate-button {
+      background-color: green;
+      font-size: 15px;
+      color: white;
+      padding: 13px 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+
+  <!------------------Subscribe HTML------------------>
+  <p>Youtube Subscribe Button</p>
+
+  <button onclick="subscribe();" class="css-subscribe-button js-subscribe-button">Subscribe</button>
+
+  <!----------------Amazon Shipping HTML-------------->
+  <p>Amazon Shipping Calculator</p>
+  <input type="text" class="css-cost-input js-cost-input" name="" id="" placeholder="Cost of Order" onkeydown="
+    handleCostKeydown(event);
+  ">
+  
+  <button class="calculate-button" onclick="
+      calculateTotal();
+  ">Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+  <script>
+    /********Example of Type Coercion*******/
+    //Convert Number to String
+    //if a string only contains a number,
+    //and we (-, * , /)
+    // => it will be converted into a number
+      String(25)
+      console.log('25'- 5);
+      console.log('25' + 5);
+
+    /*
+      Window Object
+      - This represents the browser
+      - We don't have to type WIndow because js adds it automatically.
+    */
+    //  window.document
+    //  window.console.log('window');
+    //  windows.alert()
+    
+
+
+    
+    /****************Subscribe Function**************/
+
+    //  .classlist = gives us control of the class attribute
+    //  classlist method  
+    //    - add() which adds a class to an element.
+    //    - remove() which removes a class from the element.
+
+    function subscribe(){
+      const buttonElement = document.querySelector('.js-subscribe-button');
+
+      if (buttonElement.innerText === 'Subscribe'){
+        buttonElement.innerHTML = 'Subscribed';
+        buttonElement.classList.add('is-subscribed');
+      } else {
+        buttonElement.innerHTML = 'Subscribe';
+        buttonElement.classList.remove('is-subscribed');
+
+      }
+    }
+
+
+
+    /**************Amazon Shipping Function**********/
+    function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input');
+
+      //use inputElement.value to get the input value inside the textbox
+
+      //Number() - akes input to the textbox and manually convert any (string) to a number.
+      let cost = Number(inputElement.value);
+      //console.log(cost);
+      //console.log(typeof cost);
+
+      if(cost < 40) {
+        cost += 10;
+        //console.log(cost);
+      }
+
+      document.querySelector('.js-total-cost')
+        .innerHTML = `$${cost}`;
+    } 
+
+    function handleCostKeydown(event){
+
+      if(event.key === 'Enter'){
+        calculateTotal();
+      }
+    }
+   
+  </script>
+  
+</body>
+</html>
