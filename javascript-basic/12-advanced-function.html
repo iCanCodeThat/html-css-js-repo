@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 12 - Advanced functions</title>
+
+  <!----------------------CSS------------------------>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+
+  <script>
+    /******************Functions are Values*******************/
+    //  Hoisting
+    //    - we can call the function before we created a function.
+    //greeting();
+
+    /*It starts here
+    function greeting(){
+      console.log('hello');
+    }
+    greeting();
+
+    
+    //const num = 2;
+    const function1 = function(){ //anonymous function - function without a name.
+      console.log('Hello2')
+    };
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+
+
+
+    //Saving values with an object
+    //saving functions inside an object.
+
+    //  Method - function saved inside an object
+    const object1 = {
+      num: 2,
+      fun: function(){
+        console.log('Hello3');
+      }
+    };
+    object1.fun();
+
+
+
+
+    //Pass a value into a function
+
+    function display(param){
+      console.log(param);
+    }
+    display(2);
+
+
+
+
+    //Passing a function into a function
+    function run(param){
+      param();
+    }
+    //callback function
+    run(function() {
+      console.log('Hello4')
+    });
+
+    
+
+    console.log('<br><br><br><br><br><br><br><br><br><br><br><br>')
+    //  setTimeout()
+    //    - allows us to run a function in the future
+    //    - takes 2 parameter:
+    //       - 1. a function we want to run in the future.
+    //       - 2. How long to wait before running this function (number in milliseconds = 1000 milliseconds = 1 second)
+
+
+    //  Asynchronous Code
+    //    - computer won't wait for a line to finish before going to the next line. 
+    //    - doesnt block our code for 3 seconds. its just set up timer in the bg and then goes to the next line of codes.
+
+
+    //  Synchronous code
+    //    - computer will wait for one line to finish before going to the next line.
+
+    
+    setTimeout(function(){
+      console.log('timeout'); //1st parameter
+      console.log('timeout2')
+    }, 3000); //2nd parameter
+
+    console.log('next line');
+
+
+    //  setinterval()
+    //  - returns a number like an ID.
+    //  - we can use this ID to stop the interval.
+    //  - takes 2 parameter:
+    //    - 1. function that we want to run in the future.
+    //    - 2. How long to wait before running this function (number in milliseconds = 1000 milliseconds = 1 second)
+    //     - it will keep running the function every seconds that is set.
+    setInterval(function(){
+      console.log('interval')
+    }, 3000);
+    console.log('next line 2');
+    */ 
+
+
+
+
+
+    //  Foreach
+    //    - it loops through the array, and for each of the values, it will save the value in the parameter and run the function.
+    //    - preferred way to loop through an array.
+    
+    /*
+    [
+      'make dinner',
+      'wash dishes',
+      'watch yt'
+    ].forEach(function(value, index){
+      console.log(index);
+      console.log(value);
+    });
+    */
+
+    console.log('<br><br><br><br><br><br><br><br><br><br><br><br>');
+
+    //  if the value is 'wash dishes', were gonna skip it
+    //  return statements end the function early and will go on to the next function.
+    //  if we want to use 'break;' in the forEach statement, its better to use a regular 'for loop'
+    [
+      'make dinner',
+      'wash dishes',
+      'watch yt'
+    ].forEach(function(value, index){
+    if(value === 'wash dishes'){
+      return;
+    }
+    console.log(index);
+    console.log(value);
+  });
+
+  </script>
+  
+</body>
+</html>
