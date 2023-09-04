@@ -13,6 +13,10 @@
 
 <body>
 
+  <button class="js-click-button" onclick="
+
+  ">Click</button>
+
   <script>
     /******************Functions are Values*******************/
     //  Hoisting
@@ -135,19 +139,144 @@
     //  if the value is 'wash dishes', were gonna skip it
     //  return statements end the function early and will go on to the next function.
     //  if we want to use 'break;' in the forEach statement, its better to use a regular 'for loop'
+
+    /*
+      [
+        'make dinner',
+        'wash dishes',
+        'watch yt'
+      ].forEach(function(value, index){
+        if(value === 'wash dishes'){
+          return;
+      }
+        console.log(index);
+        console.log(value);
+      });
+    */
+
+    //Using Arrow functions
     [
       'make dinner',
       'wash dishes',
       'watch yt'
-    ].forEach(function(value, index){
-    if(value === 'wash dishes'){
-      return;
+    ].forEach((value, index) => {
+      if(value === 'wash dishes'){
+        return;
     }
-    console.log(index);
-    console.log(value);
-  });
+      console.log(index);
+      console.log(value);
+    });
+  
+
+    console.log('<br><br><br><br><br><br><br><br><br><br><br><br>');
+
+    /****************Arrow Functions => Shorter Way to write functions*****************/
+
+    const regularFunction = function(param, param2){
+      console.log('Hi YouTube');
+      return 5;
+    };
+
+
+    const arrowFunction = (param, param2) => {
+      console.log('Hi YouTube');
+      return 5;
+    };
+    arrowFunction();
+
+    //Arrow Function shortcuts
+    const oneParam = param => {
+      console.log(param + 1);
+    };
+    oneParam(2);
+
+    //Another shortcuts
+    const oneLine = () => 2 + 3;
+    console.log(oneLine());
+
+
+    //Arrow functions inside an object w/ shortcuts
+
+    //const object2 = {
+    //  method: () => {
+
+    //   },
+    //  method(){//recommended
+    //
+    //  }
+    //};
+    console.log('<br><br><br><br><br><br><br><br><br><br><br><br>');
+
+    //  BEST PRACTICE THAN THE ONCLICK 
+    //  .addEventListener() - lets us run some code when we interact with the element.
+    //  - Has two parameters
+    //    - 1. event (interaction to listen for)
+    //    - 2. A function we want to run
+    //  - same as the onclick attributes
+
+    //  Advantage
+    //    - Lets us add multiple event listeners for an event.
+    //    - 
+    /////////////////////////////////////////////////////////////////
+
+    //  .removeEventListener()
+    //  - lets us remove an event listener
+    //  - Has two parameters
+    //    - 1. event (interaction to listen for)
+    //    - 2. A function we want to remove
+
+    const buttonElement = document.querySelector('.js-click-button');
+    
+    const eventListener = ()=> {
+      console.log('click');
+    }
+
+    //added eventlistener
+    buttonElement.addEventListener('click', eventListener);
+
+    //remove which will not run the code above
+    buttonElement.removeEventListener('click', eventListener);
+
+    buttonElement.addEventListener('click', ()=> {
+      console.log('click2');
+    });
+
+    console.log('<br><br><br><br><br><br><br><br><br><br><br><br>');
+
+    //  .filter()
+    //  - 1. Creates a new array [].
+    //  - 2. if return true, puts the value in the new array [].
+    //  - 3. if return fales, will not put the value in a new array[].
+
+    console.log([1, -3, 5].filter((value, index) => {
+      /*
+        if(value >= 0){
+          return true;
+        } else {
+          return false;
+        }
+      */
+      return value  >= 0;
+    }));
+
+    //  .map()
+    //  - Transform an array into another array.
+    //  - 1. Creates a new array [].
+    //  - 2. Whatever we return, will be added to a new array [].
+
+    console.log([1, 1, 3].map((value, index) => {
+      return value * 2;
+    }));
+
+
+    console.log([3, 3, 5].map(value =>  value * 2));
+
+    //  Closure
+    //  - if a function has access to a value.
+    //  - it will always have access to that value.
+    //  - value gets packaged together (enclosed) with the function.
+
 
   </script>
-  
 </body>
 </html>
