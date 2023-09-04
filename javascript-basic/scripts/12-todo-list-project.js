@@ -31,7 +31,7 @@ function renderTodoList (){
 
 
   //ForEach method
-  todoList.forEach(function(todoObject, index){
+  todoList.forEach((todoObject, index) => {
     //get the string for ech index above
     //const todoObject = todoList[i];
 
@@ -46,10 +46,7 @@ function renderTodoList (){
     const html = `
       <div>${name}</div>
       <div>${dueDate}</div>
-      <button class="css-delete-todo-button" onclick="
-        todoList.splice(${index}, 1);
-        renderTodoList();
-      ">Delete</button>
+      <button class="css-delete-todo-button js-delete-todo-button">Delete</button>
     `;
     todoListHTML += html;
   });
@@ -60,8 +57,22 @@ function renderTodoList (){
   //Put the HTML on the webpage
   document.querySelector('.js-todo-list')
     .innerHTML = todoListHTML;
+
+
+  document.querySelectorAll('.js-delete-todo-button')
+    .forEach((deleteButton, index) => { //Closure
+      deleteButton.addEventListener('click', () => {
+        //console.log(index); Closure
+        todoList.splice(index, 1);
+        renderTodoList();
+      });
+    });
 }
 
+document.querySelector('.js-add-button')
+  .addEventListener('click', () => {
+    addTodo();
+  });
 
 
 
