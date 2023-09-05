@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 8.2 - Object </title>
+  </head>
+  <body>
+    <script>
+
+      const product1 = {
+        name: 'basketball',
+        price: 1090
+      };
+
+      const product2 = {
+        name: 'socks',
+        price: 10901
+      };
+
+      function isSameProduct(product1, product2){
+        if((product1.name && product1.price) === (product2.name && product2.price)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(isSameProduct(product1, product2));
+
+      const myString = 'KANE';
+      console.log(myString.toLocaleLowerCase());
+      console.log(myString.repeat(2));
+
+      
+
+
+    </script>
+  </body>
+</html>

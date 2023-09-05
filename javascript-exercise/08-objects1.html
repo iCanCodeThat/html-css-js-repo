@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 8 - Object</title>
+  </head>
+  <body>
+    <script>
+      const object1 = {
+        name: 'Basketball',
+        price: 2555
+       
+      };
+      const object2 = {
+        name: 'Volleyball',
+        price: 267
+      };
+
+
+      function comparePrice(object1, object2){
+        if (object1.price < object2.price){
+          return object1;
+        } else {
+          return object2;
+        }
+        
+      }
+      console.log(comparePrice(object1, object2));
+
+      
+
+
+    </script>
+  </body>
+</html>
