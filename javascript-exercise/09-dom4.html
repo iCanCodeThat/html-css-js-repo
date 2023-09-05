@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 9.4</title>
+  </head>
+  <body> 
+    <input class="js-input" type="text" name="" id="" onkeyup="
+      myName();
+    ">
+    <p class="js-result"></p>
+
+    <script>
+      function myName(){
+        const myVar = document.querySelector('.js-input');
+        const name = myVar.value;
+
+        document.querySelector('.js-result')
+          .innerHTML = name;
+      }
+      
+    </script>
+      
+  </body>
+</html>

@@ -17,7 +17,7 @@
       score.losses = 0;
 
       localStorage.removeItem('score');
-      
+
     ">Reset Score</button>
     <script>
 
@@ -52,7 +52,7 @@
 
         localStorage.setItem('score', JSON.stringify(score));
 
-        alert(`You pick ${guess}. Computer picked ${computerMove}. ${result}
+        alert(`You pick ${guess}. Coin Flips......it display ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}`);
       } 
         function pickTheMove(){

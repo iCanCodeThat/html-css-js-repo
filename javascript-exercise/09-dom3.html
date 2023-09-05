@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 9.3</title>
+  </head>
+  <body>
+    <!----------------Amazon Shipping HTML-------------->
+    <p>Amazon Shipping Calculator</p>
+    <input type="text" class="js-cost-input" name="" id="" placeholder="Cost of Order" onkeydown="
+      handleCostKeydown(event);
+    ">
+    
+    <button onclick="
+        calculateTotal();
+    ">Calculate</button>
+
+    <p class="js-total-cost"></p>
+
+    <script>
+      /**************Amazon Shipping Function**********/
+    function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input');
+
+      //use inputElement.value to get the input value inside the textbox
+
+      //Number() - akes input to the textbox and manually convert any (string) to a number.
+      let cost = Math.floor(Number(inputElement.value).toFixed(1));
+      
+      //console.log(cost);
+      //console.log(typeof cost);
+
+      if(cost < 40) {
+        cost += 10;
+        //console.log(cost);
+      }
+
+      document.querySelector('.js-total-cost')
+        .innerHTML = `$${cost}`;
+    } 
+
+    function handleCostKeydown(event){
+
+      if(event.key === 'Enter'){
+        calculateTotal();
+      }
+    }
+    </script>
+      
+  </body>
+</html>
