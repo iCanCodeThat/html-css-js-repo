@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 9.6</title>
+</head>
+<style>
+  .css-button {
+    background-color: rgb(207, 207, 207);
+    border: none;
+    font-size: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .js-gaming {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+</style>
+<body>
+  <button class="js-button css-button" onclick="
+    myClasslist('.js-button');
+  ">Gaming</button>
+  <button class="js-button-two css-button" onclick="
+    myClasslist('.js-button-two');
+  ">Music</button>
+
+  <script>
+    function myClasslist(buttons){
+      const docu = document.querySelector(buttons);
+
+      if(!docu.classList.contains('js-gaming')){
+        docu.classList.add('js-gaming')
+      } else{
+        docu.classList.remove('js-gaming');
+      }
+    }
+    
+      
+  </script>
+  
+</body>
+</html>

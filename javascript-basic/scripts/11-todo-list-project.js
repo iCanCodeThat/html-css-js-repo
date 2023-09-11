@@ -32,7 +32,7 @@ function renderTodoList (){
   //Generating the HTML
   for(let i = 0; i < todoList.length; i++){
 
-    //get the string for ech index above
+    //get the string for each index above
     const todoObject = todoList[i];
 
     //to get the name and due date of the object

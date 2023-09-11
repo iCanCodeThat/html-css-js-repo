@@ -9,7 +9,9 @@
 
     <button
       onclick="
-      console.log(`Cart Quantity: ${cartQuantity}`) 
+      document.querySelector('.js-results')
+        .innerHTML = `Cart Quantity: ${cartQuantity}`;
+     
     "
     >
       Show Quantity
@@ -75,17 +77,22 @@
     <button
       onclick="
       cartQuantity = 0;
-      console.log('Cart was Reset!');
-      console.log(`Cart Quantity: ${cartQuantity}`);
+      document.querySelector('.js-results')
+        .innerHTML = 'Cart was Reset';
+      
     "
     >
       Reset Cart
     </button>
 
+    <p class="js-results"></p>
+
     <script>
       let cartQuantity = 0;
 
       function updateCartQuantity(value){
+
+        const result = document.querySelector('.js-results')
 
         if(cartQuantity + value > 10){
           alert('The cart is full');
@@ -93,8 +100,12 @@
           alert('Not Enought Items');
         } else {
           cartQuantity += value;
-          console.log(`Cart Quantity: ${cartQuantity}`);
+
+          result.innerHTML = `Cart Quantity: ${cartQuantity}`;
+          
         }
+
+        
       }
     </script>
   </body>
