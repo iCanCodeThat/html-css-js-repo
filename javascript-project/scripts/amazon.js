@@ -102,8 +102,21 @@ document.querySelectorAll('.js-add-to-cart')
         });
       }
 
-      
-      console.log(cart);
+      //  After we update the cart, we will calculate the Total Quantity
+      //  Use ForEach() to Loop Through an Array
+
+      //  variable to store the total quantity
+      let cartQuantity = 0;
+
+      cart.forEach((item) => {
+        cartQuantity += item.quantity;
+      });
+
+
+      //Put the quantity to the page after calculating its Total
+      document.querySelector('.js-cart-quantity')
+        .innerHTML = cartQuantity;
+
     });
   });
 
