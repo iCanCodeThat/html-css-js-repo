@@ -1,6 +1,7 @@
 //import the cart from cart.js
-import { cart } from '../data/cart.js';
+import { cart, addToCart } from '../data/cart.js';
 import { products } from '../data/products.js';
+
 //Combine all the strings together
 
 let productHTML = '';
@@ -70,6 +71,27 @@ products.forEach((product) => {
       
 });
 
+
+//UPDATE CART QUANTITY FUNCTION
+function updateCartQuantity(){
+  //  After we update the cart, we will calculate the Total Quantity
+  //  Use ForEach() to Loop Through an Array
+
+  //  variable to store the total quantity
+  let cartQuantity = 0;
+
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+
+   //Put the quantity to the page after calculating its Total
+   document.querySelector('.js-cart-quantity')
+   .innerHTML = cartQuantity;
+
+}
+
+
+
 document.querySelector('.js-product-grid')
   .innerHTML = productHTML;
 
@@ -80,44 +102,11 @@ document.querySelectorAll('.js-add-to-cart')
       //dataset - property that gives all the data attributes that is attached to the button Add to Cart.
       const productId= button.dataset.productId;
 
+      //we run the function here for add to cart
+      addToCart(productId); // we will pass the parameter productId here.
 
-      //create a variable to save the item.
-      //if we find a matching item, it will save it inside this variable.
-      let matchingItem;
-      
-      //  1. to check if the product name is already in the array
-      cart.forEach((item)=>{
-        if(productId === item.productId){
-          matchingItem = item; //this is how we figure out if the product is in the cart.
-        }
-      });
-
-      //  2. if the product is inside the cart, increase the quantity by 1.
-      if(matchingItem){
-        matchingItem.quantity ++;
-      } else { // if we did not find any matching item then...
-        //  3. If the product is not in the cart we will add it to the cart.
-        cart.push({
-          productId: productId,
-          quantity: 1
-        });
-      }
-
-      //  After we update the cart, we will calculate the Total Quantity
-      //  Use ForEach() to Loop Through an Array
-
-      //  variable to store the total quantity
-      let cartQuantity = 0;
-
-      cart.forEach((item) => {
-        cartQuantity += item.quantity;
-      });
-
-
-      //Put the quantity to the page after calculating its Total
-      document.querySelector('.js-cart-quantity')
-        .innerHTML = cartQuantity;
-
+      //we run the function update the cart quantity here.
+      updateCartQuantity();
     });
   });
 
