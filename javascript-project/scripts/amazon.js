@@ -1,6 +1,7 @@
 //import the cart from cart.js
 import { cart, addToCart } from '../data/cart.js';
 import { products } from '../data/products.js';
+import { formatCurrency } from './utils/money.js';
 
 //Combine all the strings together
 
@@ -33,7 +34,7 @@ products.forEach((product) => {
       </div>
 
       <div class="product-price">
-        $${(product.priceCents / 100).toFixed(2)
+        $${formatCurrency(product.priceCents)
         //  dividing a whole number to 100 will give a floating value.
         //  100 cents = 1 dollar
         //  Using toFixed() will display the actual price implemented.
